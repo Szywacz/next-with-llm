@@ -1,0 +1,7 @@
+@tailwind components;
+
+@layer components {
+  .toolbar-wrapper {
+    @apply fixed bottom-5 z-10 w-[90vw] border border-white bg-background p-3 md:left-5 md:w-fit md:border-none;
+  }
+}

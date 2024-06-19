@@ -1,3 +1,7 @@
+## Tech stack
+
+React + Next, Tailwind, Redux, RTK, Shadcn, GSAP, Jest
+
 ## Getting Started
 
 Run the development server to preview app:

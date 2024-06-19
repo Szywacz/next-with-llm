@@ -4,6 +4,7 @@ import '@/styles/globals.css';
 import { ThemeProvider } from '@/providers/ThemeProvider/ThemeProvider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
+import StoreProvider from '@/lib/StoreProvider';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,15 +22,16 @@ export default async function RootLayout({
 }>) {
   const messages = await getMessages();
 
-
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <NextIntlClientProvider messages={messages} locale={locale}>
-          <ThemeProvider attribute="class" defaultTheme="system">
-            {children}
-          </ThemeProvider>
-        </NextIntlClientProvider>
+        <StoreProvider>
+          <NextIntlClientProvider messages={messages} locale={locale}>
+            <ThemeProvider attribute="class" defaultTheme="system">
+              {children}
+            </ThemeProvider>
+          </NextIntlClientProvider>
+        </StoreProvider>
       </body>
     </html>
   );

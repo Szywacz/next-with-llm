@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import './component-classes.css';
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -47,6 +49,13 @@
     --input: 240 3.7% 15.9%;
     --ring: 142.4 71.8% 29.2%;
   }
+}
+
+svg {
+  display: flex;
+  color: var(--white);
+  width: 32px;
+  height: 32px;
 }
 
 @layer base {

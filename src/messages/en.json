@@ -5,5 +5,8 @@
   },
   "Nav": {
     "greeting": "Welcome on my webpage!"
+  },
+  "LangDropdown": {
+    "language": "Language"
   }
 }

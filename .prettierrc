@@ -4,7 +4,10 @@
   "semi": true,
   "bracketSameLine": false,
   "arrowParens": "avoid",
-  "printWidth": 100,
+  "printWidth": 200,
   "trailingComma": "none",
-  "proseWrap": "always"
+  "proseWrap": "always",
+  "plugins": [
+    "prettier-plugin-tailwindcss"
+  ]
 }
