@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectGroup, SelectItem, SelectLabel, SelectTrig
 import { useRouter } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 
-export default function ModeToggle() {
+export default function LangDropdown() {
   const t = useTranslations('langs');
   const tDropdown = useTranslations('LangDropdown');
 
@@ -16,7 +16,8 @@ export default function ModeToggle() {
 
   function onSelectChange(value: string) {
     const nextLocale = value;
-    router.replace(`/${nextLocale}`);
+    router.replace(`/${nextLocale}/${window.history.state.__PRIVATE_NEXTJS_INTERNALS_TREE[1].children[1].children[0]}`);
+    router.refresh();
     setCurrentLang(value);
   }
 

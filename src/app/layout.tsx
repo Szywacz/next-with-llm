@@ -5,11 +5,13 @@ import { ThemeProvider } from '@/providers/ThemeProvider/ThemeProvider';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import StoreProvider from '@/lib/StoreProvider';
+import Nav from '@/components/Nav/Nav';
+import Toolbar from '@/components/Toolbar/Toolbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Szywacz's Portfolio Wesbiste",
+  title: "Szywacz's Portfolio Website",
   description: 'Portfolio website with chatbot'
 };
 
@@ -28,7 +30,11 @@ export default async function RootLayout({
         <StoreProvider>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <ThemeProvider attribute="class" defaultTheme="system">
-              {children}
+              <main className="flex min-h-screen flex-col items-center">
+                <Nav />
+                <Toolbar />
+                {children}
+              </main>
             </ThemeProvider>
           </NextIntlClientProvider>
         </StoreProvider>

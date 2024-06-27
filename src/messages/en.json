@@ -8,5 +8,20 @@
   },
   "LangDropdown": {
     "language": "Language"
+  },
+  "Chatbot": {
+    "askChatbotQuestion": "Ask Chatbot a question: ",
+    "send": "Send",
+    "chatbotResponse": "Chatbot response: ",
+    "generatingAnswer": "Generating an answer..."
+  },
+  "notFound": {
+    "info": "Page not found - 404",
+    "goBack": "Go back to home"
+  },
+  "tools": {
+    "calendar": "Calendar",
+    "todolist": "Todolist",
+    "chatbot": "Chatbot"
   }
 }

@@ -1,5 +1,4 @@
 import { ModeToggle } from '../ui/mode-toggle';
-import { Button } from '../ui/button';
 import { useTranslations } from 'next-intl';
 import LangDropdown from '@/components/LangDropdown/LangDropdown';
 import ToolbarToggleButton from '../Toolbar/ToolbarToggleButton';
