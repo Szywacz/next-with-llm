@@ -1,11 +1,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import toolbarReducer from '../lib/features/toolbar/toolbarSlice';
+import { apiSlice } from './features/api/apiSlice';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
-      toolbar: toolbarReducer
-    }
+      toolbar: toolbarReducer,
+      [apiSlice.reducerPath]: apiSlice.reducer
+    },
+    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware)
   });
 };
 

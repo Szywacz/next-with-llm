@@ -7,6 +7,8 @@ import { getMessages } from 'next-intl/server';
 import StoreProvider from '@/lib/StoreProvider';
 import Nav from '@/components/Nav/Nav';
 import Toolbar from '@/components/Toolbar/Toolbar';
+import { ApiProvider } from '@reduxjs/toolkit/query/react';
+import { apiSlice } from '@/lib/features/api/apiSlice';
 
 const inter = Inter({ subsets: ['latin'] });
 
