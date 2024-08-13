@@ -3,6 +3,9 @@
     "pl": "Polski",
     "en": "Angielski"
   },
+  "common": {
+    "loading": "Wczytywanie..."
+  },
   "Nav": {
     "greeting": "Witaj na mojej stronie!"
   },
@@ -23,5 +26,30 @@
     "calendar": "Kalendarz",
     "todolist": "Lista zadań",
     "chatbot": "Chatbot"
+  },
+  "Todolist": {
+    "error": "Wystąpił błąd! - Nie można wyświetlić listy zadań.",
+    "empty": "Lista zadań jest pusta! - Dodaj nowe zadania!",
+    "todoItem": {
+      "remove": "Usuń"
+    },
+    "addTodo": {
+      "dialogProps": {
+        "openButtonTitle": "Dodaj nowe zadanie",
+        "dialogTitle": "Utwórz zadanie",
+        "dialogDescription": "Utwórz nowe zadanie, skonfiguruj i zapisz!",
+        "saveButtonTitle": "Utwórz"
+      },
+      "inputs": {
+        "todoTitle": {
+          "label": "Nazwa zadania:",
+          "placeholder": "Nazwa..."
+        },
+        "todoDescription": {
+          "label": "Opis zadania:",
+          "placeholder": "Opis..."
+        }
+      }
+    }
   }
 }

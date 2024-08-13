@@ -6,28 +6,36 @@ const baseUrl = process.env.NEXT_PUBLIC_TODO_API_BASE_URL + 'api';
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: baseUrl }),
+  tagTypes: ['Todo'],
   endpoints: builder => ({
     getAllTodos: builder.query<Todo[], void>({
-      query: () => `/todos`
+      query: () => `/todos`,
+      providesTags: ['Todo']
     }),
     getTodo: builder.query<Todo, void>({
       query: id => '/todos/{id}'
     }),
     createTodo: builder.mutation<Todo, void>({
-      query: () => '/todos/'
+      query: body => ({
+        url: `todo`,
+        method: 'POST',
+        body
+      })
     }),
     updateTodo: builder.mutation({
       query: todo => ({
         url: `todos/${todo._id}`,
-        method: 'PUT',
+        method: 'PATCH',
         body: todo
-      })
+      }),
+      invalidatesTags: ['Todo']
     }),
     deleteTodo: builder.mutation({
       query: id => ({
         url: `todos/${id}`,
         method: 'DELETE'
-      })
+      }),
+      invalidatesTags: ['Todo']
     })
   })
 });

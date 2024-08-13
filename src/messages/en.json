@@ -3,6 +3,9 @@
     "pl": "Polish",
     "en": "English"
   },
+  "common": {
+    "loading": "Loading..."
+  },
   "Nav": {
     "greeting": "Welcome on my webpage!"
   },
@@ -23,5 +26,30 @@
     "calendar": "Calendar",
     "todolist": "Todolist",
     "chatbot": "Chatbot"
+  },
+  "Todolist": {
+    "error": "An error has occured! - Cannot display tasks.",
+    "empty": "Your todolist is empty - Add some todos now!",
+    "todoItem": {
+      "remove": "Remove"
+    },
+    "addTodo": {
+      "dialogProps": {
+        "openButtonTitle": "Add new todo",
+        "dialogTitle": "Create Todo",
+        "dialogDescription": "Create new task, configure and save it!",
+        "saveButtonTitle": "Create"
+      },
+      "inputs": {
+        "todoTitle": {
+          "label": "Todo title:",
+          "placeholder": "Title..."
+        },
+        "todoDescription": {
+          "label": "Todo description:",
+          "placeholder": "Description..."
+        }
+      }
+    }
   }
 }

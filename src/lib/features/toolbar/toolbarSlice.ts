@@ -5,7 +5,7 @@ interface ToolbarState {
 }
 
 const initialState: ToolbarState = {
-  isToolbarVisible: false
+  isToolbarVisible: true
 };
 
 const toolbarSlice = createSlice({

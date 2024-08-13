@@ -28,7 +28,7 @@ export default function Toolbar() {
     {
       id: 1,
       name: t('todolist'),
-      path: '/todolist',
+      path: '/todo',
       icon: <LuListTodo />
     },
     {
